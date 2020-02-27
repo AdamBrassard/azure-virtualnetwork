@@ -38,7 +38,7 @@ galaxy_info:
   #   - 1.0
   #   - 7
   #   - 99.99
-  cloud_platform:
+  cloud_platforms:
     - azure
   galaxy_tags:
     - networking

@@ -1,0 +1,11 @@
+---
+# tasks file for azure-virtualnetwork
+- name: Create/Update Virtual Network(VNET)
+  azure_rm_virtualnetwork:
+    name: "{{ vnet_name }}"
+    location: "{{ location }}"
+    resource_group: "{{ resource_group }}"
+    address_prefixes: "{{vnet_address_prefix | default(omit, true) }}"
+    dns_servers: "{{ dns_servers | default(omit, true) }}"
+    purge_dns_servers: "{{ purge_dns_servers | default(omit, true) }}"
+    purge_address_prefixes: "{{ purge_address_prefixes | default(omit, true) }}"
